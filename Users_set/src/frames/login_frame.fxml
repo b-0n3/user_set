@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #fcf9ea;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.login_frame_controller">
+   <children>
+      <TextField fx:id="User_field" layoutX="368.0" layoutY="228.0" />
+      <PasswordField fx:id="pass_field" layoutX="367.0" layoutY="300.0" />
+      <Circle fx:id="sub_button" layoutX="442.0" layoutY="434.0" opacity="0.61" radius="59.0" stroke="#719192" strokeLineCap="ROUND" strokeMiterLimit="0.0" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#3c4245" />
+                  <Stop color="#719192" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Circle>
+      <Text fx:id="error_msg" layoutX="373.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="153.21875" />
+      <Text fill="#3c9d9b" layoutX="432.0" layoutY="438.0" smooth="false" strokeType="INSIDE" strokeWidth="0.5" text="GO">
+         <stroke>
+            <LinearGradient endX="0.3557692307692307" endY="0.9759615384615384" startX="0.31249999999999994" startY="0.3942307692307693">
+               <stops>
+                  <Stop color="#ffbbcc" />
+                  <Stop color="#221f20" offset="0.007434944237918215" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke></Text>
+      <Text fill="#3c9d9b" layoutX="349.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName :" />
+      <Text fill="#3c9d9b" layoutX="348.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PassWord :" />
+   </children>
+</Pane>
