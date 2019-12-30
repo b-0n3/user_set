@@ -1,5 +1,9 @@
 package Users_set;
 
-public interface ControllerClass {
+import java.util.ArrayList;
 
+import excelReader.Staff;
+
+public interface ControllerClass {
+	public abstract  void preloadData( ArrayList<Staff> staff);
 }
