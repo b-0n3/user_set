@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141">
+   <children>
+      <HBox layoutX="-3.0" layoutY="1.0" prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="361.0" spacing="15.0">
+               <children>
+                  <Circle fill="DODGERBLUE" radius="101.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="user name" textAlignment="CENTER" wrappingWidth="235.83502197265625">
+                     <font>
+                        <Font name="Didot Bold" size="29.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="700.0" prefWidth="840.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
