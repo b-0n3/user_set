@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ProgressBar?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #293462;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.add_users_cont">
+   <children>
+      <Button fx:id="save_button" layoutX="1032.0" layoutY="633.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="123.0" text="Save">
+         <font>
+            <Font name="Chalkboard" size="16.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableView" layoutX="1.0" layoutY="-2.0" prefHeight="700.0" prefWidth="818.0" style="-fx-background-radius: 20.0;" />
+      <Circle fx:id="Staff_image" fill="DODGERBLUE" layoutX="1008.0" layoutY="140.0" opacity="0.0" radius="107.0" stroke="BLACK" strokeType="INSIDE" />
+      <Pane layoutX="839.0" layoutY="281.0" prefHeight="181.0" prefWidth="341.0" style="-fx-background-color: #5eb7b7; -fx-background-radius: 20;" />
+      <Pane fx:id="to_change_on" layoutX="849.0" layoutY="291.0" prefHeight="160.0" prefWidth="321.0" style="-fx-background-color: #5eb7b7; -fx-background-radius: 20;">
+         <children>
+            <Text fx:id="text_to" layoutX="101.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drag Folder here" textAlignment="CENTER" textOrigin="CENTER">
+               <font>
+                  <Font name="Chalkboard" size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text layoutX="992.0" layoutY="500.0" pickOnBounds="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Or" textAlignment="CENTER" textOrigin="CENTER">
+         <font>
+            <Font name="Chalkboard" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="ChooseDir" layoutX="911.0" layoutY="526.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="180.0" text="Choose Folder">
+         <font>
+            <Font name="Chalkboard" size="16.0" />
+         </font>
+      </Button>
+      <Text layoutX="950.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to Set Images :" textAlignment="CENTER" textOrigin="CENTER">
+         <font>
+            <Font name="Chalkboard" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="error_text" layoutX="939.0" layoutY="601.0" strokeType="OUTSIDE" strokeWidth="0.0" textOrigin="CENTER">
+         <font>
+            <Font name="Chalkboard" size="16.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="prg" layoutX="832.0" layoutY="677.0" prefHeight="14.0" prefWidth="234.0" progress="0.0" />
+      <Button fx:id="go_back" layoutX="849.0" layoutY="633.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="106.0" text="Go back" />
+      <Text fx:id="Pcent" layoutX="1067.0" layoutY="689.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="61.21875" />
+   </children>
+</AnchorPane>

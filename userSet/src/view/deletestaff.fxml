@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ProgressIndicator?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1386.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Deletestaff">
+<children>
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="1346.0" spacing="400.0">
+         <children>
+            <Button fx:id="goBack" mnemonicParsing="false" prefHeight="27.0" prefWidth="93.0" text="Go back" />
+            <HBox alignment="CENTER" prefHeight="68.0" prefWidth="361.0" spacing="5.0">
+               <children>
+                  <TextField fx:id="SearchField" prefHeight="27.0" prefWidth="357.0" promptText="id" />
+                  <ProgressIndicator fx:id="prog" progress="0.0" />
+               </children>
+            </HBox>
+            <Button fx:id="search" mnemonicParsing="false" prefHeight="27.0" prefWidth="68.0" text="Go" />
+         </children>
+      </HBox>
+      <HBox prefHeight="605.0" prefWidth="1174.0" spacing="5.0">
+         <children>
+          <ScrollPane prefHeight="128.0" prefWidth="1050.0">
+              <content>
+                  <VBox fx:id="staffBox" prefHeight="603.0" prefWidth="667.0" spacing="10.0">
+                      <padding>
+                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                      </padding>
+                  </VBox>
+              </content>
+          </ScrollPane>
+            <ScrollPane layoutX="10.0" layoutY="10.0" prefHeight="128.0" prefWidth="1050.0">
+               <content>
+                  <VBox fx:id="BlackList" prefHeight="601.0" prefWidth="668.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+</children>
+<padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+</padding>
+</VBox>

@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="userSet">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/poi-ooxml-3.10-FINAL-20140208.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-scratchpad-3.10-FINAL-20140208.jar!/" />
+      <root url="jar://$PROJECT_DIR$/protobuf-java-3.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-3.10-FINAL-20140208.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-examples-3.10-FINAL-20140208.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dom4j-1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/mysql-connector-java-8.0.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-ooxml-schemas-3.10-FINAL-20140208.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-3.7 (1).jar!/" />
+      <root url="jar://$PROJECT_DIR$/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/stax-api-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poi-excelant-3.10-FINAL-20140208.jar!/" />
+      <root url="jar://$PROJECT_DIR$/xmlbeans-2.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

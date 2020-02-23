@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #faf5e4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.addAdmin_cont">
+   <children>
+      <Pane layoutX="9.0" layoutY="8.0" prefHeight="578.0" prefWidth="493.0" style="-fx-background-color: #004445; -fx-background-radius: 40.0;">
+         <children>
+            <VBox layoutX="53.0" layoutY="28.0" prefHeight="515.0" prefWidth="372.0" spacing="25.0">
+               <children>
+                  <TextField fx:id="firsName" prefHeight="32.0" prefWidth="372.0" promptText="firstName" />
+                  <TextField fx:id="lastname" prefHeight="27.0" prefWidth="287.0" promptText="last name " />
+                  <TextField fx:id="Username" prefHeight="27.0" prefWidth="287.0" promptText="UserName" />
+                  <TextField fx:id="post" prefHeight="27.0" prefWidth="287.0" promptText="Post " />
+                  <TextField fx:id="phoneNumber" prefHeight="27.0" prefWidth="287.0" promptText="phone number " />
+                  <TextField prefHeight="27.0" prefWidth="287.0" promptText="email " />
+                  <TextField prefHeight="27.0" prefWidth="287.0" promptText="confim email" />
+                  <DatePicker fx:id="datePicker" prefHeight="27.0" prefWidth="287.0" promptText="birthDay" />
+                  <PasswordField fx:id="Pass" prefHeight="27.0" prefWidth="287.0" promptText="password" />
+                  <PasswordField fx:id="repass" prefHeight="27.0" prefWidth="287.0" promptText="confirm password" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </Pane>
+      <Circle fx:id="imageV" fill="DODGERBLUE" layoutX="694.0" layoutY="181.0" radius="81.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="uploadImage" fill="DODGERBLUE" layoutX="694.0" layoutY="180.0" radius="81.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="Go" layoutX="739.0" layoutY="485.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0" text="Go" />
+      <Button fx:id="GoBack" layoutX="573.0" layoutY="485.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0" text="Go back" />
+      <Text fx:id="errText" layoutX="583.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="228.21875" />
+   </children>
+</AnchorPane>
