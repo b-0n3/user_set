@@ -122,6 +122,8 @@ public class StaffHolder extends VBox {
             } catch (FileNotFoundException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
+
+
             }
 
             show.setOnAction(event->{
