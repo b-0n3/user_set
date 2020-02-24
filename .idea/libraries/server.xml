@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="server">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/server/out/production/server/org.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/server/out/production/server/json-simple-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/server/out/production/server/mail.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="userSet">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/userSet/out/production/userSet/log4j-1.2.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userSet/out/production/userSet/mysql-connector-java-5.1.48.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userSet/out/production/userSet/ojdbc10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userSet/out/production/userSet/poi-3.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userSet/out/production/userSet/json-simple-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userSet/out/production/userSet/charm-glisten-4.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

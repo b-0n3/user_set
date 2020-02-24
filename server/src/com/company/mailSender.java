@@ -1,5 +1,7 @@
 package com.company;
 
+import org.jetbrains.annotations.NotNull;
+
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -39,7 +41,7 @@ public class mailSender {
         System.out.println("conne");
     }
 
-    public void sendRE(List<String> list) {
+    public void sendRE(@NotNull List<String> list) {
 
 
         Iterator<String> msgit = list.iterator();

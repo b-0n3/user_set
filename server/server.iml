@@ -10,7 +10,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/fff/mysql-connector-java-5.1.48.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../fff/mysql-connector-java-5.1.48.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -29,6 +29,15 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/src/mail.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/18.0.0/annotations-18.0.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

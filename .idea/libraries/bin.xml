@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="bin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/userSet/bin/poi-3.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userSet/bin/ojdbc10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userSet/bin/mysql-connector-java-5.1.48.jar!/" />
+      <root url="jar://$PROJECT_DIR$/userSet/bin/log4j-1.2.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

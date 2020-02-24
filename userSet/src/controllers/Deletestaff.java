@@ -1,6 +1,7 @@
 package controllers;
 
 import com.gluonhq.charm.glisten.control.ProgressIndicator;
+import com.sun.deploy.panel.AbstractRadioPropertyGroup;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,11 +12,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import models.Staff;
 import models.admin;
+import org.apache.poi.hssf.record.formula.functions.T;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -42,121 +45,75 @@ public class Deletestaff {
 
     @FXML
     private VBox BlackList;
-    private ArrayList<Staff> staffs = new ArrayList<>();
 
-    private  ArrayList<Staff> toDelete= new ArrayList<>();
-     private admin realAdmin;
-
-
-     /**
-      * this class represent the blacklist list
-      *
-      **/
-
-    public class Blacklist extends  VBox{
+    private ArrayList<StaffHolder> StaffHOlders = new ArrayList<>();
+    private ArrayList<BlackList> blackLists  = new ArrayList<>();
 
 
+    /** this class represent the BlackList
+     * it shall hold three blackCard
+     * */
+    public class BlackList extends  VBox{
+        public BlackCard
+                blackcard[];
+        public BlackList( BlackCard[ ] black)
+        {
 
-    public Blacklist(){
-        
+                this.blackcard = black;
+
+        }
     }
 
-    }
+    /**
+     *
+     * this will be the class that hold tree staff cards
+*/
 
-/** each element of the blacklist field will be an instance of this class */
-public class blackcart extends VBox{
-    private ImageView image;
-    private Text       id;
-    private Button Undo;
-    private Button show;
-    private Staff staff;
+public class StaffHolder extends VBox {
 
-    public blackcart(Staff stf)
+    private staffCarts[]  staffCarts;
+
+    public StaffHolder(staffCarts[] StaffCarts)
     {
-        this.staff = stf;
-        image =new ImageView();
-        id = new Text();
-       Undo = new Button();
-        show = new Button();
+        this.staffCarts = StaffCarts;
+
     }
 
     public void doFinal()
     {
 
-        this.setSpacing(30.0);
-        this.setAlignment(Pos.CENTER);
-        image.setFitHeight(200);
-        image.setFitWidth(216);
-        id.setText(String.valueOf(this.id));
-
-        try {
-            javafx.scene.image.Image image = new Image(new FileInputStream(staff.getImage()));
-
-            this.image.setImage(image);
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        show.setOnAction(event->{
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/view/container.fxml"));
-           try {
-               Parent parent = loader.load();
-
-               container cn = new container();
-               cn = loader.getController();
-               ArrayList<Staff> stf = new ArrayList<>();
-               stf.add(this.staff);
-               cn.preloadData(stf, realAdmin);
-               Scene scene = new Scene(parent);
-               stage.setScene(scene);
-               stage.show();
-               if (cn.isAdded)
-               {
-                   staffs.remove(this.staff);
-                   toDelete.add(this.staff);
-               }
-
-           }catch(Exception e){e.printStackTrace();}
-        });
-
-        Undo.setOnAction(event->{
-            toDelete.remove(this.staff);
-            staffs .add(this.staff);
-
-        });
-    }
 
     }
+    }
 
-    /** each element of the staff list will be an instance of this class*/
+ /**
+  * this class represent staff cart
+  * */
 
-public class staffcart extends VBox{
-
-
-        private ImageView image;
-        private Text       id;
-        private Button addToBlackList;
-        private Button show;
-        private Staff staff;
-
-        public staffcart(Staff stf)
-        {
-            this.staff = stf;
-            image =new ImageView();
-            id = new Text();
-            addToBlackList = new Button();
+ public  class staffCarts extends HBox
+ {
+        public Button show;
+        public Button AddToblacklist;
+        public Text id;
+        public  ImageView image;
+        public Staff staff;
+        public  staffCarts(Staff staff){
+            this.staff = staff;
             show = new Button();
+            AddToblacklist = new Button();
+            id = new Text();
+            image = new ImageView();
+
+            AddToblacklist. setText("Add To BlackList");
+            show.setText("Show");
         }
-
-        public void doFinal()
+        public  void doFinal()
         {
-
             this.setSpacing(30.0);
             this.setAlignment(Pos.CENTER);
             image.setFitHeight(200);
             image.setFitWidth(216);
-            id.setText(String.valueOf(this.id));
+            id.setText(String.valueOf(staff.getId()));
 
             try {
                 javafx.scene.image.Image image = new Image(new FileInputStream(staff.getImage()));
@@ -166,69 +123,65 @@ public class staffcart extends VBox{
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+
             show.setOnAction(event->{
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/view/container.fxml"));
-                try {
-                    Parent parent = loader.load();
-
-                    container cn = new container();
-                    cn = loader.getController();
-                    ArrayList<Staff> stf = new ArrayList<>();
-                    stf.add(this.staff);
-                    cn.preloadData(stf, realAdmin);
-                    Scene scene = new Scene(parent);
-                    stage.setScene(scene);
-                    stage.show();
-                    if (cn.isAdded)
-                    {
-                        staffs.remove(this.staff);
-                        toDelete.add(this.staff);
-                    }
-
-                }catch(Exception e){e.printStackTrace();}
-            });
-
-            addToBlackList.setOnAction(event->{
-                staffs.remove(this.staff);
-                toDelete.add(this.staff);
-
-            });
-
-}
-
-/** this is the class that will hold an array of three staff cards */
 
 
-
-public class carHolder extends  VBox{
-
-}
+                });
+            AddToblacklist.setOnAction(event->{
 
 
-
-
-    public class holder {
-        private ArrayList<Blacklist> blacklists;
-        private ArrayList<carHolder> cartHolders;
-
-
-
-        public void doFinal(ArrayList<Blacklist> blacklists,ArrayList<carHolder> cartHolders)
-        {
-            this.blacklists = blacklists;
-            this.cartHolders = cartHolders;
-            Platform.runLater(()->{
-                staffBox.getChildren().remove(0, staffBox.getChildren().size());
-                BlackList.getChildren().remove(0, BlackList.getChildren().size());
-
-                for (carHolder cr :cartHolders)
-                staffBox.getChildren().addAll(cr);
-                for (Blacklist blc :blacklists)
-                    BlackList.getChildren().add(blc);
             });
 
         }
-    }
+ }
+
+public class BlackCard extends  HBox{
+    public Button show;
+    public Button undo;
+    public Text id;
+    public  ImageView image;
+    public Staff staff;
+     public BlackCard(Staff staff)
+     {
+         this.staff = staff;
+         show = new Button();
+         undo = new Button();
+         id = new Text();
+         image = new ImageView();
+
+        undo.setText("Undo");
+        show.setText("Show");
+     }
+     public void doFinal()
+     {
+         this.setSpacing(30.0);
+         this.setAlignment(Pos.CENTER);
+         image.setFitHeight(200);
+         image.setFitWidth(216);
+         id.setText(String.valueOf(staff.getId()));
+
+         try {
+             javafx.scene.image.Image image = new Image(new FileInputStream(this.staff.getImage()));
+
+             this.image.setImage(image);
+         } catch (FileNotFoundException e) {
+             // TODO Auto-generated catch block
+             e.printStackTrace();
+         }
+
+         show.setOnAction(event->{
+
+
+         });
+         undo.setOnAction(event->{
+
+             if ()
+         });
+     }
+
+
+}
+
 
 }
