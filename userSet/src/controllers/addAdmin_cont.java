@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import javax.swing.JFileChooser;
 
-import com.mysql.cj.xdevapi.JsonArray;
+
 import javafx.application.Platform;
 import javafx.event.Event;
 import models.*;

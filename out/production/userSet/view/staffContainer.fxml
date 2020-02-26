@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+
+
+      <VBox alignment="TOP_CENTER" layoutY="-8.0" prefHeight="751.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StaffContainer" spacing="10.0">
+         <children>
+            <Circle fx:id="image" fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="id" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="id" layoutX="215.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="birth_day" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="bd" layoutX="215.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="birth_place" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="bp" layoutX="215.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="sex" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="sex" layoutX="215.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="sit_fam" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="sfam" layoutX="215.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="nationalite" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="natio" layoutX="215.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="grade" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="grad" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox layoutX="10.0" layoutY="539.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="functio_n" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="function" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox layoutX="10.0" layoutY="533.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="post" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="post" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox layoutX="10.0" layoutY="533.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="categorie" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="cat" layoutX="215.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox layoutX="10.0" layoutY="898.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="echelon" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="echlo" layoutX="215.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox layoutX="10.0" layoutY="924.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ent_effect" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="entee" layoutX="215.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox layoutX="10.0" layoutY="950.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="regime_retraite" />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="regim" layoutX="215.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox layoutX="10.0" layoutY="975.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="affil_recore" />
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </HBox>
+            <Text fx:id="affi" layoutX="215.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox layoutX="10.0" layoutY="1001.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="date_der_promo" />
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </HBox>
+            <Text fx:id="datere" layoutX="215.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox layoutX="10.0" layoutY="1027.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="cin" />
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </HBox>
+            <Text fx:id="cin" layoutX="215.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox layoutX="10.0" layoutY="1015.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="section_analytique" />
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </HBox>
+            <Text fx:id="sectio" layoutX="215.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <HBox layoutX="10.0" layoutY="1015.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="date_embauche" />
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </HBox>
+            <Text fx:id="dateem" layoutX="215.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+

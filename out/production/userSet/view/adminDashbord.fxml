@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.adminDashbordCont">
+   <children>
+      <HBox layoutX="-3.0" layoutY="1.0" prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="361.0" spacing="15.0">
+               <children>
+                  <Circle fx:id="image" fill="DODGERBLUE" radius="101.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hello ">
+                     <VBox.margin>
+                        <Insets right="150.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="fullName" layoutX="73.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user name" textAlignment="CENTER" wrappingWidth="235.83502197265625">
+                     <font>
+                        <Font name="Didot Bold" size="29.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="96.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName ">
+                     <VBox.margin>
+                        <Insets right="120.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="userName" layoutX="73.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user name" textAlignment="CENTER" wrappingWidth="235.83502197265625">
+                     <font>
+                        <Font name="Didot Bold" size="29.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="96.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number ">
+                     <VBox.margin>
+                        <Insets right="100.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="phoneNumber" layoutX="73.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user name" textAlignment="CENTER" wrappingWidth="235.83502197265625">
+                     <font>
+                        <Font name="Didot Bold" size="29.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="171.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Post">
+                     <VBox.margin>
+                        <Insets right="160.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="Post" layoutX="73.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user name" textAlignment="CENTER" wrappingWidth="235.83502197265625">
+                     <font>
+                        <Font name="Didot Bold" size="29.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="840.0" spacing="20.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Use Excel File" />
+                  <Pane prefHeight="231.0" prefWidth="800.0" style="-fx-background-color: #5eb7b7; -fx-background-radius: 20;">
+                     <children>
+                        <Pane fx:id="Drag_field" layoutX="7.0" layoutY="10.0" prefHeight="211.0" prefWidth="787.0" style="-fx-background-color: #5eb7b7; -fx-background-radius: 20;">
+                           <children>
+                              <Text fx:id="textTo" layoutX="340.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drag File Here" />
+                           </children></Pane>
+                     </children>
+                  </Pane>
+                  <Text layoutX="416.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or" wrappingWidth="14.97412109375" />
+                  <Button fx:id="addsinglstaff" mnemonicParsing="false" prefHeight="27.0" prefWidth="199.0" text="Add single Staff" />
+                  <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or" />
+                  <Button fx:id="dellStaff" layoutX="10.0" layoutY="227.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="202.0" text="Delete Staff" />
+                  <Text layoutX="10.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or" />
+                  <Button fx:id="findStaff" layoutX="10.0" layoutY="227.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="211.0" text="Find Staff" />
+                  <Text layoutX="413.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Or" />
+                  <Button fx:id="addAdmin" mnemonicParsing="false" prefHeight="27.0" prefWidth="215.0" text="AddAdmin" />
+                  <Button fx:id="logout" mnemonicParsing="false" text="log out" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding></VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
