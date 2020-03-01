@@ -3,14 +3,14 @@ package com.company;
 
 
 
-import com.sun.tools.javac.main.Option;
+
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+
 import org.json.simple.parser.JSONParser;
 
 
 import javax.crypto.spec.DHParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
+
 
 import java.io.*;
 import java.math.BigInteger;
@@ -25,7 +25,7 @@ public class ClientHandler implements Runnable {
     private  ObjectOutputStream out ;
 
     private   BigInteger  privateKey ,key;
-    //private static long numclient;
+
 
 
 

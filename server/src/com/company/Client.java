@@ -35,9 +35,9 @@ public class Client {
 
     private  boolean isloged;
     private boolean jobDone;
-    private boolean insertdone = false;
+
     private  int tim;
-     static boolean threadisDone = false;
+
      private String path;
     java.util.Timer timer = new Timer();
     private boolean timerStarte = false;
@@ -115,11 +115,9 @@ public class Client {
             else if (request.equals("check username"))
                 return(new usernameChecker(object, this));
             if(request.equals("sendmeEmail"))
-            {
-
-                System.out.println("here i can start mailing");
                return  new inserter( this);
-            }
+            if (request.equals("delete"))
+                return new Deleter(this);
 
         }
 

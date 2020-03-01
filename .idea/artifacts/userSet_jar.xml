@@ -1,0 +1,36 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="userSet:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/userSet_jar</output-path>
+    <root id="archive" name="userSet.jar">
+      <element id="module-output" name="userSet" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/protobuf-java-3.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/src/json-simple-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/out/production/userSet/log4j-1.2.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/out/production/userSet/mysql-connector-java-5.1.48.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/out/production/userSet/ojdbc10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/out/production/userSet/poi-3.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/out/production/userSet/json-simple-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/out/production/userSet/charm-glisten-4.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/stax-api-1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/poi-ooxml-schemas-3.10-FINAL-20140208.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/src/charm-glisten-4.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/bin/poi-3.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/bin/ojdbc10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/bin/mysql-connector-java-5.1.48.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/bin/log4j-1.2.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/poi-examples-3.10-FINAL-20140208.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/poi-excelant-3.10-FINAL-20140208.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/dom4j-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/xmlbeans-2.3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/src/mysql-connector-java-5.1.48.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/poi-3.7 (1).jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/dom4j-1.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/src/log4j-1.2.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/src/poi-3.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/src/ojdbc10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/poi-scratchpad-3.10-FINAL-20140208.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/poi-3.10-FINAL-20140208.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/userSet/poi-ooxml-3.10-FINAL-20140208.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

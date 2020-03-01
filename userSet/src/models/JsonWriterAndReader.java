@@ -74,6 +74,28 @@ public class JsonWriterAndReader  {
         }
         return  arry;
     }
+    public JSONArray getstaffArrayToDelete(ArrayList<Staff> staffs)
+    {
+        JSONArray arry = new JSONArray();
+        if (staffs != null)
+        {
+            for (Staff sta  : staffs){
+                JSONObject staf = new JSONObject();
+                JSONObject staffholder = new JSONObject();
+                try {
+                    staf.put("stf", cr.toString(sta));
+                    staf.put("imgName",sta.getImage().getName());
+                    staffholder.put("stf",staf);
+                    arry.add(staffholder);
+                }
+                catch (Exception e )
+                {
+
+                }
+            }
+        }
+        return  arry;
+    }
 
     /*
 

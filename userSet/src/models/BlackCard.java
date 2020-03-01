@@ -1,8 +1,14 @@
 package models;
 
 
+import controllers.Deletestaff;
+import controllers.container;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -11,6 +17,7 @@ import javafx.scene.text.Text;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 public class BlackCard extends HBox {
     public Button show;
@@ -18,8 +25,10 @@ public class BlackCard extends HBox {
     public Text id;
     public ImageView image;
     public Staff staff;
+
     public BlackCard(Staff staff)
     {
+
         this.staff = staff;
         show = new Button();
         undo = new Button();
@@ -49,9 +58,21 @@ public class BlackCard extends HBox {
         show.setOnAction(event->{
             FXMLLoader loader = new FXMLLoader();
             try {
-                loader.load(getClass().getResource("./view/Container.fxml"));
-                ControllerClass cn = loader.getController();
-
+             Parent pn =   loader.load(getClass().getResource("./view/Container.fxml"));
+                 container cn = loader.getController();
+                ArrayList<Staff> stf = new ArrayList<>();
+                stf.add(this.staff);
+                    cn.preloadData(stf , Deletestaff.admin);
+                Deletestaff.stage.setScene(new Scene(pn));
+                Deletestaff.stage.show();
+                cn.Add.setText("undo");
+                cn.isAdded.addListener(new ChangeListener<Boolean>() {
+                    @Override
+                    public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                        if ( newValue == true)
+                            undoO();
+                    }
+                });
             }catch (Exception e)
             {
                 e.printStackTrace();
@@ -59,8 +80,12 @@ public class BlackCard extends HBox {
         });
         undo.setOnAction(event->{
 
-
+            undoO();
         });
+    }
+
+    private void undoO() {
+        Deletestaff.toWhiteList(this);
     }
 
 

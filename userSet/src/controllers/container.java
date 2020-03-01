@@ -1,5 +1,6 @@
 package controllers;
 
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -78,14 +79,14 @@ public class container implements ControllerClass {
     private Button goBack;
 
     @FXML
-    private Button Add;
+    public Button Add;
 
     private  Staff stf;
 
-    boolean isAdded;
+    public SimpleBooleanProperty isAdded;
 
     public container() {
-        isAdded = false;
+        isAdded.setValue(false);
     }
     public void display()
     {
@@ -119,12 +120,12 @@ public class container implements ControllerClass {
         }catch (Exception e)
         {e.printStackTrace();}
         Add.setOnAction(event->{
-            isAdded = true;
+            isAdded.set(true);
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.close();
         });
         goBack.setOnAction(event->{
-            isAdded = false;
+            isAdded.setValue(false);
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.close();
         });

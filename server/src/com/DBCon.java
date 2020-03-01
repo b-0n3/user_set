@@ -247,6 +247,10 @@ public class DBCon {
     }
 
 
-
-
+    public void Delete(Staff stf) throws  Exception{
+        getCon();
+        ps = conn.prepareStatement("insert from staff where id=?");
+        ps.setInt(1, stf.getId());
+        ps.execute();
+    }
 }

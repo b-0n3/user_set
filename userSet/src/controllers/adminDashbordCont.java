@@ -72,6 +72,15 @@ public class adminDashbordCont implements ControllerClass
     @FXML
     public void initialize() throws FileNotFoundException 
     {
+		dellStaff.setOnAction(event -> {
+			Deletestaff df = new Deletestaff();
+			SceneChanger sc = new SceneChanger();
+			try {
+				sc.changeScenes(event , "/view/deletestaff.fxml","delete Staffs" , null, df, realadmin);
+			}catch (Exception e)
+			{e.printStackTrace();}
+
+		});
 addAdmin.setOnAction(event->{
 	addAdmin_cont con = new addAdmin_cont();
 	SceneChanger sc = new SceneChanger();
@@ -102,7 +111,7 @@ logout.setOnAction(event -> {
 
       		 @Override
    	            public void handle(DragEvent event) {
-      			System.out.println("the first one 4");
+      			
    	                if (event.getGestureSource() != Drag_field
    	                        && event.getDragboard().hasFiles()) {
    	            

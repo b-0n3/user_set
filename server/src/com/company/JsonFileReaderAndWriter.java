@@ -97,67 +97,42 @@ public class JsonFileReaderAndWriter {
     create arrayList  and fil it with staffs from th JsonArray
     */
 
-//    public  ArrayList<Staff> getArraylistOfStaffs(ArrayList<Staff> staffList, JSONArray object) {
-//
-//
-//       if (object != null && staffList != null)
-//       {
-//           object.forEach(emp->
-//           {
-//
-//              JSONObject stfs = (JSONObject)emp;
-//               JSONObject stf = (JSONObject)stfs.get("stf");
-//              try {
-//
-//                          DBCon db = new DBCon();;
-//                  Staff staff = (Staff) cr.fromString((String) stf.get("stf"));
-//                  File    img = new File("/root/sss/images/staffs/"+ (String) stf.get("imgName"));
-//                  BufferedOutputStream bs = null;
-//
-//                  try {
-//                      FileOutputStream fs = new FileOutputStream(new File(img.getPath()));
-//                      bs = new BufferedOutputStream(fs);
-//                      bs.write((byte[]) cr.fromString((String) stf.get("img")));
-//                      bs.close();
-//                      bs = null;
-//
-//                  } catch (Exception e) {
-//                      e.printStackTrace();
-//                  }finally {
-//                      if (bs != null) try { bs.close(); } catch (Exception e) {}
-//                  }
-//                 staff.setImage(img);
-//                  if (!db.checkStaff(staff))
-//                  {
-//                      try {
-//                          Files.write(Paths.get("/root/logs/rejectedtoSend.txt"), (String.valueOf(staff.getId()) + "\n").getBytes(), StandardOpenOption.APPEND);
-//                      }catch (IOException e) {
-//                          e.printStackTrace();
-//                      }
-//                  }
-//                  else {
-//                        db.pushStaff(staff);
-//                      try {
-//                          Files.write(Paths.get("/root/logs/AcceptedtoSend.txt"), (String.valueOf(staff.getId()) + "\n").getBytes(), StandardOpenOption.APPEND);
-//                      }catch (IOException e) {
-//                          e.printStackTrace();
-//                      }
-//                  }
-//                    staff = null;
-//                    img = null;
-//                    System.gc();
-//              }
-//              catch(Exception e){
-//                  e.printStackTrace();
-//           }
-//
-//
-//           });
-//       }
-//
-//    return  staffList;
-//
-//    }
+    public  ArrayList<Staff> getArraylistOfStaffs(ArrayList<Staff> staffList, JSONArray object) {
+
+
+       if (object != null && staffList != null)
+       {
+           object.forEach(emp->
+           {
+
+              JSONObject stfs = (JSONObject)emp;
+               JSONObject stf = (JSONObject)stfs.get("stf");
+              try {
+
+                          DBCon db = new DBCon();;
+                  Staff staff = (Staff) cr.fromString((String) stf.get("stf"));
+                  File    img = new File("/root/sss/images/staffs/"+ (String) stf.get("imgName"));
+                  if (img.exists())
+                      img.delete();
+
+
+                 staff.setImage(img);
+                   staffList.add(staff);
+                    staff = null;
+                    img = null;
+                    System.gc();
+              }
+              catch(Exception e){
+                  e.printStackTrace();
+           }
+
+
+           });
+       }
+
+    return  staffList;
+
+    }
 
     /*
             create arrayList of admins an fil it with admins from th JsonArray

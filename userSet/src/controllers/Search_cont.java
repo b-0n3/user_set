@@ -297,6 +297,7 @@ public class Search_cont implements ControllerClass {
             }
 
         });
+
         search.setOnAction(evet->{
 //            remov();
 //            if (!SearchField.getText().isEmpty())
