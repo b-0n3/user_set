@@ -19,7 +19,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 
-			Parent root= FXMLLoader.load(getClass().getResource("/view/login_frame.fxml"));
+			Parent root= FXMLLoader.load(getClass().getResource("/view/addAdmin.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
@@ -76,6 +76,7 @@ try {
 		launch(args);
 		
 	}
+
 	public void deleteImages(File Images[])
 	{
 		if (Images != null)

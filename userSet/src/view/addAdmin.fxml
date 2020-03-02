@@ -22,7 +22,7 @@
                   <TextField fx:id="Username" prefHeight="27.0" prefWidth="287.0" promptText="UserName" />
                   <TextField fx:id="post" prefHeight="27.0" prefWidth="287.0" promptText="Post " />
                   <TextField fx:id="phoneNumber" prefHeight="27.0" prefWidth="287.0" promptText="phone number " />
-                  <TextField prefHeight="27.0" prefWidth="287.0" promptText="email " />
+                  <TextField fx:id="email" prefHeight="27.0" prefWidth="287.0" promptText="email " />
                   <TextField prefHeight="27.0" prefWidth="287.0" promptText="confim email" />
                   <DatePicker fx:id="datePicker" prefHeight="27.0" prefWidth="287.0" promptText="birthDay" />
                   <PasswordField fx:id="Pass" prefHeight="27.0" prefWidth="287.0" promptText="password" />

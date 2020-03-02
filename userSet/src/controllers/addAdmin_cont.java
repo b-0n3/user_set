@@ -47,7 +47,8 @@ public class addAdmin_cont implements ControllerClass {
 
     @FXML
     private TextField phoneNumber;
-
+    @FXML
+	private  TextField email;
     @FXML
     private PasswordField Pass;
 
@@ -81,7 +82,7 @@ public class addAdmin_cont implements ControllerClass {
 
 
 			SceneChanger sc = new SceneChanger();
-			System.out.println("done")  ;
+
 
 				try {
 					sc.changeScenes(event, "/view/adminDashbord.fxml", "Drag here", null, con, realAdmin);
@@ -100,6 +101,7 @@ public class addAdmin_cont implements ControllerClass {
     	imageV.setFill(Color.SNOW);
 
     	GoBack.setOnAction(event->{
+
 			goBacktoDash( event);
     	});
     	
@@ -107,38 +109,44 @@ public class addAdmin_cont implements ControllerClass {
     	Go.setOnAction(evet->{
     	
     			
-    		
-
-    			
-    			try {
-					adm = new admin(Username.getText(), Pass.getText(), firsName.getText(),datePicker.getValue(), lastname.getText(), phoneNumber.getText(), post.getText().isEmpty() ? "NO VALUE": post.getText(), "hello");
-
-					adm.setImage(Image);
-    			} catch (NoSuchAlgorithmException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-
-    			
-    	
-    		try {
-				JsonWriterAndReader js = new JsonWriterAndReader();
-				ArrayList<admin> aa = new ArrayList<>();
-				aa.add(adm);
-				JSONArray array = new JSONArray();
-				array.add( js.createHeader("addAdmin"));
-				array.add(js.getadminArray(aa));
-				System.out.println(array);
-			TCPClient Conn = new TCPClient();
-				Conn.send(array, realAdmin.getUsername());
-			JSONArray arr =Conn.rec();
-				System.out.println(arr);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			goBacktoDash( evet);
-    	
+//
+//
+//
+//    			try {
+//					adm = new admin(Username.getText(), Pass.getText(), firsName.getText(),datePicker.getValue(), lastname.getText(), phoneNumber.getText(), post.getText().isEmpty() ? "NO VALUE": post.getText(), "hello");
+//
+//					adm.setImage(Image);
+//    			} catch (NoSuchAlgorithmException e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				}
+//
+//
+//
+//    		try {
+//				JsonWriterAndReader js = new JsonWriterAndReader();
+//				ArrayList<admin> aa = new ArrayList<>();
+//				aa.add(adm);
+//				JSONArray array = new JSONArray();
+//				array.add( js.createHeader("addAdmin"));
+//				array.add(js.getadminArray(aa));
+//				System.out.println(array);
+//			TCPClient Conn = new TCPClient();
+//				Conn.send(array, realAdmin.getUsername());
+//			JSONArray arr =Conn.rec();
+//				System.out.println(arr);
+//			} catch (Exception e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//			goBacktoDash( evet);
+			try {
+				 adm = new admin(Username.getText(), Pass.getText(), firsName.getText(), datePicker.getValue(), lastname.getText(), phoneNumber.getText(), post.getText().isEmpty() ? "NO VALUE" : post.getText(),email.getText() );
+				 adm.setImage(Image);
+			}catch(Exception e)
+			{e.printStackTrace();}
+			System.out.printf(" this is username |%s| this is Pass |%s| this is firts |%s| \n  this" +
+					"",adm.getUsername(),adm.getPassword(), adm.getFirstname() );
     	});
     	
     	imageV.setEffect(new DropShadow(+50d, 0d, +5d, Color.DARKSEAGREEN));
